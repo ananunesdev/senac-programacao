@@ -1,2 +1,2 @@
 # senac-programacao
- Programação no senac
+ Conteúdo aprendido nas aulas de programação do Senac.
