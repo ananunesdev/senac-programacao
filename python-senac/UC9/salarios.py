@@ -12,6 +12,7 @@ print('------------------------------------------')
 salario = float(input('Salário: '))
 conf_vt = int(input('Você recebe vale transporte? 0 - Não | 1 - Sim '))
 filho = int(input('Você possui quantos filhos? '))
+print()
 perce = 0
 aum = 0
 novo_s = 0
@@ -69,16 +70,26 @@ print('------------------------------------------')
 print('     .::::     HOLERITE        ::::.')
 print('------------------------------------------')
 
+print('Nome: ', nome)
+print('CPF: ', cpf)
+print('Função: ', funcaof)
+print('CBO', cbo)
+
 print()
+print('REAJUSTE')
 print(f'Salário antes do reajuste: R$ {salario:.2f}\n'
       f'Percentual de aumento {perce}\n'
       f'Valor do aumento salarial: R$ {aum:.2f}\n'
-      f'Salário após o reajuste: R$ {novo_s:.2f}\n'
-      f'Desconto Vale-Transporte: {vt:.2f}\n'
+      f'Salário após o reajuste: R$ {novo_s:.2f}\n')
+
+print()
+print('DESCONTOS')
+print(f'Desconto Vale-Transporte: {vt:.2f}\n'
       f'Desconto do Imposto de Renda {irrf:.2f}\n'
       f'Salário-família: {familia:.2f}')
 
 print()
+print('INSS')
 if (salario <= 1302):
         scal = (salario / 100) * 7.5
         print(f'Sua contribuição é de {scal:.2f}')
