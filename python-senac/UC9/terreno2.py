@@ -62,3 +62,5 @@ f'O valor da cimento é {resultado_cimento:.2f}\n'
 f'Preço de produção {valor_producao:.2f}\n'
 f'O valor da venda é {venda:.2f}\n'
 f'O lucro é de {lucro:.2f}')
+
+
