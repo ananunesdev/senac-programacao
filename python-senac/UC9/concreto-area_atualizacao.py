@@ -22,21 +22,18 @@ calc_brita = (altura_lj_m3 / 2) * 2
 calc_cimento = (altura_lj_m3 / 1) * 2
 calc_peso_caminhao = (altura_lj_m3 * 2400)
 
-areia = 189,03 #valor de metros cubicos
-brita = 175,00 #valor de metros cubicos
-cimento = 270,00 #valor de metros cubicos
-
-(calc_areia / 12) * 6
-(calc_brita / 12) * 4
-(calc_cimento / 12) * 2
-custo_total_m3 = (areia * custo_total_m3) + (brita * custo_total_m3) + (cimento * custo_total_m3)
+comp_areia = 189.03 #valor de metros cubicos
+comp_brita = 175.00 #valor de metros cubicos
+comp_cimento = 270.00 #valor de metros cubicos
 
 print(f'A media em metros quadrados é: {area_terreno:.2f}.\n')
 print(f'A medida em metros cubicos é: {altura_lj_m3:.2f}.\n')
+
 print('===== MEDIDA PARA CARREGAMENTO DO CAMINHÃO =====')
 print(f'Qtd.: Areia: {calc_areia:.2f}\n')
 print(f'Qtd.: Brita: {calc_brita:.2f}\n')
 print(f'Qtd.: Cimento: {calc_cimento:.2f}\n')
+
 print('===== PESO DO CAMINHÃO EM M³ =====\n')
 print(f'Peso de Caminhão: {calc_peso_caminhao:.3f}\n')
 

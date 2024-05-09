@@ -44,8 +44,8 @@ print(f'Peso de Caminhão: {calc_peso_caminhao:.3f}\n')
 
 print( '====== CÁLCULO DE LUCRO =====' )
 Vareia = 189.03
-Vbrita = 175
-Vcimento = 270
+Vbrita = 175.00
+Vcimento = 270.00
 
 resultado_areia = ((Vareia / 12) * 6)
 resultado_brita = ((Vbrita / 12) * 4)
