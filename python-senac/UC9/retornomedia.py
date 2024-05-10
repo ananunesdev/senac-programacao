@@ -27,6 +27,10 @@ while (contador < qtd):
     else:
         recuperacao = recuperacao + 1 
         print('O aluno(a)' , nome , 'está de recuperação.')
+print('')
+
+import os
+os.system ('cls')
 
 print('A quantidade de alunos aprovados é de ', aprovado)
 print('A quantidade de alunos reprovados é de ', reprovado)
