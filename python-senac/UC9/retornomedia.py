@@ -4,6 +4,9 @@ print('--------------------------------------')
 
 qtd = int(input('Insira a quantidade de alunos: '))
 contador = 0
+aprovado = 0
+reprovado = 0
+recuperacao = 0
 while (contador < qtd):
     contador = contador + 1
     nome = input('Insira o nome do aluno: ')
@@ -16,8 +19,15 @@ while (contador < qtd):
     media = (nota1 + nota2 + nota3 + nota4) / 4
 
     if media >= 7:
-        print('O aluno' , nome , 'foi aprovado com nota ', media, '.')
+        aprovado = aprovado + 1
+        print('O aluno(a)' , nome , 'foi aprovado com nota ', media, '.')
     elif media < 4.5:
-        print('O aluno' , nome , 'foi reprovado com nota ', media, '.')
+        reprovado = reprovado + 1
+        print('O aluno(a)' , nome , 'foi reprovado com nota ', media, '.')
     else:
-        print('O aluno' , nome , 'está de recuperação.')
+        recuperacao = recuperacao + 1 
+        print('O aluno(a)' , nome , 'está de recuperação.')
+
+print('A quantidade de alunos aprovados é de ', aprovado)
+print('A quantidade de alunos reprovados é de ', reprovado)
+print('A quantidade de alunos de recuperação é de ', recuperacao)
