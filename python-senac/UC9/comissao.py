@@ -11,3 +11,4 @@ print('==== RESUMO ====')
 print('Nome: ', nome)
 print('Salário final: (salário + comissão): ', s_final)
 print('O salário do vendedor no mês é: R$ ', salario)
+
