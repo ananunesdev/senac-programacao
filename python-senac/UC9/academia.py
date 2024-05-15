@@ -19,10 +19,10 @@ while(leitura != senha):
 
 def inicio():
     print("\n"f"- - - - - - - - - - - - - - - -\n")
-    print("1- Cadastrar Cliente\n"
-          "2- Listar Clientes\n"
-          "3- Listar Personal Trainer\n"
-          "4- Sair\n")
+    print("1 - Cadastrar Cliente\n"
+          "2 - Listar Clientes\n"
+          "3 - Listar Personal Trainer\n"
+          "4 - Sair\n")
 
 def cadastrar_Cliente():
     import os
