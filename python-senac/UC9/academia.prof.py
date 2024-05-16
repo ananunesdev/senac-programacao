@@ -7,6 +7,31 @@ def exibir_ficha(paciente):
         else:
             print(f'{chave}: {valor}')
 
+def exibir_todos_pacientes(pacientes):
+    if not pacientes:
+        print('Não há pacientes registrados.')
+    else:
+        for i, paciente in enumerate(pacientes,1):
+            print('\nFicha de Paciente')
+            print('===================')
+            exibir_ficha(paciente)
+
+def alimentacao_ficha(imc):
+    if imc is None:
+        return 'Altura e/ou peso inválidos. Não é possível indicar uma alimentação.'
+    elif imc <= 18.5:
+        alimentacao = 'Abaixo do peso. É recomendável uma dieta equilibrada e acompanhamento nutricional.'
+        dieta = (
+            'Sugestão de Alimentação:\n'
+            '- Café da manhã: Aveia com frutas e iogurte.\n'
+            '- Almoço: Peito de frango grelhado, arroz integral e legumes.\n'
+            '- Jantar: Salada com quinoa e atum.\n'
+            '- Lanches: Frutas secas, nozes e sucos naturais.'
+        )
+        alimentacao = 'Sem sugestão de alimentação.'
+        dieta = ('\n')
+    return f'{alimentacao}\n\n{dieta}'
+
 def avaliacao_imc (imc):
     if imc is None:
         return 'Altura e/ou peso inválidos. Não é possível calcular o IMC.'
@@ -42,13 +67,16 @@ def registrar_paciente():
 
     avaliacao = avaliacao_imc(imc)
 
+    alimentacao = alimentacao_ficha(imc)
+
     paciente = {
         'Nome': nome,
         'Idade': idade,
         'Peso': peso,
         'Altura': altura,
         'IMC': imc,
-        'Avaliacao': avaliacao
+        'Avaliação': avaliacao,
+        'Alimentação': alimentacao
     }
 
     return paciente
@@ -60,7 +88,8 @@ def main():
         print('\nMenu')
         print("1 - Cadastrar Cliente\n"
           "2 - Listar Clientes\n"
-          "3 - Sair\n")
+          '3 - Exibir Clientes\n  '
+          "9 - Sair\n")
         
         opcao = input('Escolha uma opção: ')
 
@@ -73,6 +102,8 @@ def main():
             else:
                 print('Nenhum paciente registrado.')
         elif opcao == '3':
+            exibir_todos_pacientes(pacientes)
+        elif opcao == '9':
             print('Saindo...')
             break
         else:
