@@ -88,7 +88,7 @@ def main():
         print('\nMenu')
         print("1 - Cadastrar Cliente\n"
           "2 - Listar Clientes\n"
-          '3 - Exibir Clientes\n  '
+          '3 - Exibir Clientes\n'
           "9 - Sair\n")
         
         opcao = input('Escolha uma opção: ')
