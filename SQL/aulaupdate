@@ -1,0 +1,9 @@
+******UPDATE EM LOTE COMO FAZER*****
+
+use sysgerenc_veiculos;
+
+select * from veiculo;
+
+select * from veiculo inner join abastecimento on veiculo.VeiculoID = abastecimento.VeiculoID where veiculo.placa = 'DEF5678';
+
+update abastecimento set tipocombustivel = 'Etanol' where VeiculoID = 2;

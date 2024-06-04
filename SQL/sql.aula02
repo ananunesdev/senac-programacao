@@ -1,0 +1,16 @@
+create database if not exists sysgerenc_veiculos;
+
+drop table #apagar tabela
+show table #mostrar tabela
+
+create table manutencao (
+	ManutencaoID int (11) auto_increment primary key,
+	VeiculoID int (11),
+	data_manutencao date not null,
+	tipo varchar (50) not null,
+	descricao text #permite 1000 caracteres,
+	km real not null,
+	custo decimal (10,2),
+	foreign key (VeiculoID) references veiculo(VeiculoID)
+);
+varchar = 255 caracteres

@@ -1,0 +1,97 @@
+-- Criação do banco de dados
+CREATE DATABASE Escola;
+
+-- Uso do banco de dados criado
+USE Escola;
+
+-- Tabela para armazenar os dados dos cursos
+CREATE TABLE cursos (
+id INTEGER AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(50) NOT NULL,
+requisito VARCHAR(255),
+carga_horaria SMALLINT,
+preco decimal (10,2)
+);
+
+insert into cursos(
+	id, nome, requisito, carga_horaria, preco
+) values(
+	4, 'Técnico em Guia de Turismo', 'Cursando ou ensino médio completo', '1200', 8550
+);
+
+select * from cursos;
+
+-- Tabela para armazenar os dados dos instrutores
+CREATE TABLE instrutores (
+id INTEGER AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(50) NOT NULL,
+email VARCHAR(50) NOT NULL,
+valor_hora INTEGER,
+certificados VARCHAR(255)
+);
+
+insert into instrutores(
+	id, nome, email, valor_hora, certificados
+) values(
+	4, 'Gustavo Guanabara', 'cursoemvideo@gmail.com', 55, 'Licenciatura Sistemas de Informação, Bacharelado Engenharia da Computação, Pós Graduação Engenharia da Computação'
+);
+
+select * from instrutores;
+
+-- Tabela para armazenar os dados dos alunos
+CREATE TABLE alunos (
+id INTEGER AUTO_INCREMENT PRIMARY KEY,
+cpf CHAR(11) NOT NULL UNIQUE,
+nome VARCHAR(50) NOT NULL,
+email VARCHAR(50) NOT NULL,
+fone CHAR(14),
+data_nascimento DATE
+);
+
+insert into alunos(
+	id, cpf, nome, email, fone, data_nascimento
+) values(
+	29, 28358458010, 'Salatiel Fernandes', 'salalafefe@gmail.com', 33987146707, '2000-01-27'
+);
+
+select * from alunos;
+
+-- Tabela para armazenar os dados das turmas
+CREATE TABLE turmas (
+id INTEGER AUTO_INCREMENT PRIMARY KEY,
+instrutores_id INTEGER NOT NULL,
+cursos_id INTEGER NOT NULL,
+data_inicio DATE NOT NULL,
+data_final DATE NOT NULL,
+carga_horaria SMALLINT,
+FOREIGN KEY (instrutores_id) REFERENCES instrutores(id),
+FOREIGN KEY (cursos_id) REFERENCES cursos(id)
+);
+
+insert into turmas(
+	id, instrutores_id, cursos_id, data_inicio, data_final, carga_horaria
+) values(
+	4, 4, 4, '2023-07-29', '2025-05-08', 1200
+);
+
+select * from turmas;
+
+-- Tabela para armazenar as matrículas dos alunos nas turmas
+CREATE TABLE matriculas (
+id INTEGER AUTO_INCREMENT PRIMARY KEY,
+turmas_id INTEGER NOT NULL,
+alunos_id INTEGER NOT NULL,
+data_matricula DATE NOT NULL,
+FOREIGN KEY (turmas_id) REFERENCES turmas(id),
+FOREIGN KEY (alunos_id) REFERENCES alunos(id)
+);
+
+select * from matriculas;
+
+insert into matriculas(
+	turmas_id, alunos_id, data_matricula
+) values(
+	4, 14, '2023-07-29'
+);
+
+select * from turmas;

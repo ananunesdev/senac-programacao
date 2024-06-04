@@ -1,0 +1,80 @@
+create database sysescola; #Criar banco de dados
+
+use sysescola; #usar o banco criado para manipular o banco de dados
+
+create table tab_aluno (
+	id_aluno int(10) not null auto_increment,
+    nome_aluno varchar(200) not null,
+    nascimento_aluno date not null,
+    cpf_aluno varchar(14) null,
+    rg_aluno varchar(15) null,
+    sexo_aluno char(1) null default 'm',
+    status_aluno tinyint(1) null default 1
+    primary key(id_aluno)
+);
+
+insert into tab_aluno (
+	nome_aluno, nascimento_aluno, cpf_aluno, rg_aluno, sexo_aluno, status_aluno
+)value(
+	'Ana Luísa Nunes', '2005-03-03', '059.564.852-02', 'MG123456789', 'm', 1 
+);
+
+insert into tab_aluno (
+	nome_aluno, nascimento_aluno, cpf_aluno, rg_aluno, sexo_aluno, status_aluno
+)value(
+	'Ana Luísa Nunes', '2005-03-03', '059.564.852-02', 'MG123456789', 'f', 1 
+);
+
+insert into tab_aluno (
+	nome_aluno, nascimento_aluno, cpf_aluno, rg_aluno, sexo_aluno, status_aluno
+)value(
+	'Luiz Enrico Simões dos Santos', '2005-05-10', '001.656.985-74', 'MG479635862', 'm', 1 
+);
+
+insert into tab_aluno (
+	nome_aluno, nascimento_aluno, cpf_aluno, rg_aluno, sexo_aluno, status_aluno
+)value(
+	'Jane Nunes da Silva', '1975-02-12', '010.589.741-89', 'MG642398756', 'f', 1 
+);
+
+insert into tab_aluno (
+	nome_aluno, nascimento_aluno, cpf_aluno, rg_aluno, sexo_aluno, status_aluno
+)value(
+	'Anderson Luiz da Silva', '1974-03-24', '749.471.478-47', 'MG169745823', 'm', 1 
+);
+
+insert into tab_aluno (
+	nome_aluno, nascimento_aluno, cpf_aluno, rg_aluno, sexo_aluno, status_aluno
+)value(
+	'Luana Nunes Silva', '1996-07-22', '074.126.746-77', 'MG469325869', 'f', 1 
+);
+
+insert into tab_aluno (
+	nome_aluno, nascimento_aluno, cpf_aluno, rg_aluno, sexo_aluno, status_aluno
+)value(
+	'Patricia Carvalho Lima', '1972-11-03', '111.011.744-00', 'MG971658742', 'f', 1 
+);
+
+insert into tab_aluno (
+	nome_aluno, nascimento_aluno, cpf_aluno, rg_aluno, sexo_aluno, status_aluno
+)value(
+	'Reinaldo Alves Simas', '1988-03-03', '659.794.111-56', 'MG476933269', 'm', 1 
+);
+
+insert into tab_aluno (
+	nome_aluno, nascimento_aluno, cpf_aluno, rg_aluno, sexo_aluno, status_aluno
+)value(
+	'Otaviano Otácio Raimundo', '1966-08-14', '889.570.852-73', 'MG789659886', 'm', 1 
+);
+
+insert into tab_aluno (
+	nome_aluno, nascimento_aluno, cpf_aluno, rg_aluno, sexo_aluno, status_aluno
+)value(
+	'Girlene Lages', '2001-10-10', '487.685.125-85', 'MG478855654', 'f', 1 
+);
+
+insert into tab_aluno (
+	nome_aluno, nascimento_aluno, cpf_aluno, rg_aluno, sexo_aluno, status_aluno
+)value(
+	'Luciana Ferreira', '1998-04-01', '477.874.231-65', 'MG146369852', 'm', 1 
+);
